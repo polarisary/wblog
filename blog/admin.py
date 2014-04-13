@@ -1,6 +1,6 @@
 #coding:utf-8
 from django.contrib import admin
-from django.contrib.markup.templatetags.markup import restructuredtext
+from django.contrib.markup.templatetags.markup import markdown
 
 from .models import Post
 from .models import Category
@@ -30,7 +30,7 @@ class PostAdmin(admin.ModelAdmin):
         if not obj.summary:
             obj.summary = obj.content
         if not obj.is_old:
-            obj.content_html = restructuredtext(obj.content)
+            obj.content_html = markdown(obj.content)
         else:
             obj.content_html = obj.content.replace('\r\n', '<br/>')
             import re
@@ -54,7 +54,7 @@ class PageAdmin(admin.ModelAdmin):
         if obj.is_html:
             obj.content_html = obj.content
         else:
-            obj.content_html = restructuredtext(obj.content)
+            obj.content_html = markdown(obj.content)
         obj.save()
 
 

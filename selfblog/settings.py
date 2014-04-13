@@ -137,7 +137,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     #'django_xmlrpc',
     #'pingback',
-    #'duoshuo',
+    'duoshuo',
     'blog',
 )
 
@@ -243,5 +243,5 @@ ONE_DAY = 24*60*60
 FIF_MIN = 15 * 60
 FIVE_MIN = 5 * 60
 
-DUOSHUO_SECRET = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
-DUOSHUO_SHORT_NAME = 'xxxxxxxx'
+DUOSHUO_SECRET = '054234ebce8876299fca572d6058906a'
+DUOSHUO_SHORT_NAME = 'polarisary'
