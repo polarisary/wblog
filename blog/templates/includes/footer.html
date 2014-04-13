@@ -1,63 +1,25 @@
-<footer class="footer">
-{% comment %}<div class="container">
-    <p>版权所有 © 2010-2013 the5fire.com </p>
-    <p>CC BY-NC-SA 3.0</p>
-    <p>
-    Powered by <a href="http://www.djangoproject.com" target="_blank">Django</a>. 
-    Host on <a href="http://www.webfaction.com?affiliate=the5fire" target="_blank">WebFaction</a>.
-    </p>
-    <p>
-    当前{{ online_num }}人在线,表示毫无压力
-    {% if online_num > 50 %}
-    <strong>囧~</strong>
-    {% endif %}
-    {% if online_num < 10 %}
-    <strong>汗~</strong>
-    {% endif %}
-    </p>
-    <p>本页面加载耗时:<!!LOAD_TIMES!!>s</p>
-    <p>
-        <a href="/sitemap.xml">网站地图</a>
-    </p>    
-</div>{% endcomment %}
+<footer class="bs-footer">
 <div class="container">
-
-{% comment %}<ul>
-    <li>
-        <ul>
-            <li class="active"><a href="/blog/">Blog</a></li>
-        </ul>
-    </li>
-    <li>
-        <ul>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
-    </li>
-    <li>
-        <ul>
-            <li><a href="/programs/">Programs</a></li>
-            <li><a href="/programs/solitaire/">Solitaire</a></li>
-            <li><a href="/programs/sudoku/">Sudoku</a></li>
-            <li><a href="/programs/minesweeper/">Minesweeper</a></li>
-            <li><a href="/programs/pong/">Pong</a></li>
-            <li><a href="/programs/mandelbrot/">Mandelbrot</a></li>
-        </ul>
-    </li>
-    <li>
-        <ul>
-            <li><a href="/music/">Music</a></li>
-            <li><a href="/music/the-snowman/">The Snowman</a></li>
-        </ul>
-    </li>
-    <li>
-        <ul>
-            <li><a href="/tango/">Tango</a></li>
-        </ul>
-    </li>
-</ul>{% endcomment %}
-
-<br style="clear:both">
-<p> 当前{{ online_num }}人在线
+    <div class="row">
+        <div class="col-md-3">
+            <p>版权所有 &copy; 2014 polarisary.com </p>
+            <p>CC BY-NC-SA 3.0</p>
+            <p>
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a onclick="set_width(1170)">设置1170px宽度</a>
+                <a onclick="reset()">恢复宽度</a>
+            </p>
+        </div>
+        <div class="col-md-5">
+            <p>
+            基于Django1.5、gunicorn、supervisord、nginx构建
+            </p>
+            <p>
+            Host on <a target="_blank" href="http://www.webfaction.com?affiliate=polarisary">WebFaction</a>.
+            </p>
+            <p> 当前{{ online_num }}人在线
     {% if online_num > 50 %}
     <strong>囧~</strong>
     {% endif %}
@@ -65,7 +27,16 @@
     <strong>汗~</strong>
     {% endif %}
    &nbsp;&nbsp;&nbsp;本页面加载耗时:<!!LOAD_TIMES!!>s</p>
-
-<p id="copyright">版权所有 © 2014-~ polarisary.com&nbsp;&nbsp;&nbsp;&nbsp;Thank you for your time.</p>
+        </div>
+        <div class="col-md-3">
+            <ul style="text-align:left">
+                <li><a href="http://www.cnblogs.com/zeng-wei/">我的博客园</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3857a29e2548d8eb40f5229fc33734e4' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </footer>

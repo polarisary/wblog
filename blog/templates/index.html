@@ -9,12 +9,12 @@
     {% with post_list=posts.object_list %}
     {% if post_list %}
     {% for post in post_list %}
-        <div class="article">
-            <h2 class='under_line'>
-                <a href="{{ post.get_absolute_url }}" rel="bookmark" title="详细阅读 {{ post.title }}">
-                    {% autoescape off %}{{ post.title }}{% endautoescape %}
+        <div class="caption">
+            <h3 class='under_line'>
+                <a href="{{ post.get_absolute_url }}" title="详细阅读 {{ post.title }}">
+                    {% autoescape off %}{{ post.title }}{% if post.is_top %}[置顶]{% endif %}{% endautoescape %}<span class="badge">&nbsp;&nbsp;{{ post.view_times }}°C </span>
                 </a>
-            </h2>
+            </h3>
             <div class="info">
                 作者：the5fire
                 | 分类：<a href="/category/{{ post.category.alias }}" title="查看 post.category.name 中的全部文章" rel="category tag">{{ post.category.name }}</a> 
@@ -42,15 +42,12 @@
                 <span class="pull-right"><a href="{{ post.get_absolute_url }}" title="{{ post.title }}" rel="bookmark">阅读全文</a></span>
             </div>
 
-            <div class="clear"></div>
         </div>
-        <div class="clear"></div>
     {% endfor %}
     {% endif %}
     {% endwith %}
-        <hr/>
         <div class="pagination pagination-centered pagination-small">
-            <ul>
+            <ul class="pagination">
                 {% if posts.number <= 1 %}
                     <li class="disabled"><a>上一页</a></li>
                 {% else %}

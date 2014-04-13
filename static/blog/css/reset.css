@@ -67,8 +67,12 @@ p {
     margin-left: -40px;
 }
 .under_line {
-    border-bottom: 1px solid #e8e8e8;
-    padding-bottom: 5px;
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #E8E8E8;
+    border-top: 0 solid #E8E8E8;
+    margin-bottom: 10px;
+    /*border-bottom: 1px solid #e8e8e8;*/
+    /*padding-bottom: 5px;*/
 }
 /*code*/
 .docutils {

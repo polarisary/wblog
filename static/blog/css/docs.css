@@ -39,7 +39,7 @@ body {
 -------------------------------------------------- */
 
 .bs-docs-nav {
-  background-color: #563d7c;
+  background-color: #555555;
 }
 .bs-docs-nav .navbar-brand {
   color: #fff;
@@ -645,6 +645,7 @@ body {
 
 /* Footer
 -------------------------------------------------- */
+
 
 .bs-footer {
   padding-top: 40px;
